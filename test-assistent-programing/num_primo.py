@@ -2,7 +2,23 @@ import math
 
 
 def eh_primo(n):
-    """Retorna True se n for um número primo, caso contrário False."""
+    """Verifica se um número é primo.
+
+    Utiliza um algoritmo otimizado que testa divisibilidade por 2, 3 e depois
+    por números da forma 6k ± 1 até a raiz quadrada de n.
+
+    Args:
+        n: Número inteiro a ser verificado.
+
+    Returns:
+        bool: True se n for um número primo, False caso contrário.
+
+    Examples:
+        >>> eh_primo(29)
+        True
+        >>> eh_primo(10)
+        False
+    """
     if n < 2:
         return False
     if n <= 3:
